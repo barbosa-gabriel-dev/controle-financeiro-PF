@@ -132,7 +132,7 @@
       <!-- BLOCO 3: RESUMO DOS 4 CARTÕES DE CRÉDITO NO MÊS -->
       <div>
         <div class="flex justify-between items-center mb-3">
-          <h3 class="font-bold text-slate-700 text-sm uppercase tracking-wide"><i class="fa-solid fa-credit-card text-indigo-600 mr-1"></i> Estimativa de Fatura dos 4 Cartões neste Mês</h3>
+          <h3 class="font-bold text-slate-700 text-sm uppercase tracking-wide"><i class="fa-solid fa-credit-card text-indigo-600 mr-1"></i> Estimativa de Fatura dos Cartões neste Mês</h3>
           <button onclick="abrirModalCompraCartao()" class="text-xs bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-lg font-medium">
             <i class="fa-solid fa-plus mr-1"></i> Lançar Compra no Cartão
           </button>
@@ -193,9 +193,19 @@
 
     <!-- ================= ABA 2: CARTÕES DE CRÉDITO (ATÉ 4 CARTÕES) ================= -->
     <section id="sec-cartoes" class="hidden space-y-6">
-      <!-- Cards Detalhados dos 4 Cartões -->
-      <div id="gridCartoesDetalhado" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-wrap justify-between items-center gap-3">
+        <div>
+          <h2 class="font-bold text-slate-800">Gerenciamento de Cartões (Até 4 Cartões Ativos)</h2>
+          <p class="text-xs text-slate-500">Configure limites, datas de fechamento/vencimento, oculte ou adicione novos cartões.</p>
+        </div>
+        <button onclick="abrirModalNovoCartao()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
+          <i class="fa-solid fa-plus mr-1"></i> Adicionar Novo Cartão
+        </button>
+      </div>
 
+      <!-- Cards Detalhados dos Cartões (Ativos e Inativos) -->
+      <div id="gridCartoesDetalhado" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+      
       <!-- Barra de Ações e Filtros de Compras do Cartão -->
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-wrap justify-between items-center gap-3">
         <div class="flex flex-wrap items-center gap-2">
